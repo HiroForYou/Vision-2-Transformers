@@ -4,7 +4,7 @@
 
 <p align="center">
     <br/>
-    <a href="https://colab.research.google.com/github/HiroForYou/Vision-2-Transformers/tree/main/DINO/video_inference.ipynb">
+    <a href="https://colab.research.google.com/github/HiroForYou/Vision-2-Transformers/blob/main/DINO/video_inference.ipynb">
             <img src="https://colab.research.google.com/assets/colab-badge.svg"/>
     </a>
     <br/>
