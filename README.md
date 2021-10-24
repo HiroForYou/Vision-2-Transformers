@@ -15,7 +15,7 @@ Colección de investigaciones de Transformers en Computer Vision, que inspiraron
 
 ## 📚 Contenido
 - ✅ [Emerging Properties in Self-Supervised Vision Transformers](./DINO) [[paper](https://arxiv.org/abs/2104.14294)]
-- ✅ [Vision Transformer -ViT (App demo) 📱](./Vision-Transformer-ViT) [[paper en español](Vision-Transformer-ViT/paper-es.pdf)]
+- ✅ [Vision Transformer - ViT (App demo) 📱](./Vision-Transformer-ViT) [[paper en español](Vision-Transformer-ViT/paper-es.pdf)]
 - ⬜️ 
 
 ## 👨‍💻 Maintainers

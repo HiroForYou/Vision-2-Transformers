@@ -1,0 +1,7 @@
+__pycache__/
+.ipynb_checkpoints/
+logs-pretrained-k80-10e/
+logs-pretrained-local/
+logs-scratch-local-10e/
+data/imagenette2-320/
+mildlyoverfitted/
