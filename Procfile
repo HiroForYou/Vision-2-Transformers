@@ -1,1 +1,1 @@
-web: voila --no-browser DINO/dino-scratch/visualize_attentions.ipynb
+web: voila --port=3000 --no-browser DINO/dino-scratch/visualize_attentions.ipynb
