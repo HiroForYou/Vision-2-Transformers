@@ -4,6 +4,5 @@ logs-pretrained-k80-10e/
 logs-pretrained-local/
 logs-scratch-local-10e/*
 !logs-scratch-local-10e/best_model.pth
-data/imagenette2-320/train/
-data/imagenette2-320/noisy_imagenette.csv
+data/
 mildlyoverfitted/
