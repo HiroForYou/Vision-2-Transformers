@@ -1,1 +1,1 @@
-web: voila --VoilaConfiguration.file_whitelist="['.*']" --port=$PORT --no-browser --template=material --theme=dark --enable_nbextensions=True Spotle_Twitter_Data_DashBoard.ipynb    
+web: voila --port=$PORT --no-browser --enable_nbextensions=True notebooks/Dashboard.ipynb
