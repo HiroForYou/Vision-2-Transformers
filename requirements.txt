@@ -1,10 +1,11 @@
-jupyterlab
-requests
-pandas
-textblob
-nltk
-plotly-express
-pytest
+--find-links https://download.pytorch.org/whl/torch_stable.html
+numpy
+torch==1.9.0+cpu
+torchvision==0.10.0+cpu
 voila
+jupyterlab 
+textblob
 ipyvuetify
 voila-vuetify
+matplotlib
+timm
