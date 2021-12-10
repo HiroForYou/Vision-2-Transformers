@@ -1,0 +1,9 @@
+--find-links https://download.pytorch.org/whl/torch_stable.html
+numpy==1.21.2
+torch==1.9.0+cpu
+torchvision==0.10.0+cpu
+voila
+jupyter 
+numpy 
+matplotlib
+timm
