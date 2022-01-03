@@ -5,3 +5,7 @@ torchvision==0.10.0+cpu
 timm
 streamlit
 matplotlib
+fastapi==0.68.1
+gunicorn
+uvicorn==0.15.0
+python-multipart

@@ -1,1 +1,1 @@
-web: sh setup.sh && streamlit run DINO/dino-scratch/app/app.py
+web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker DINO/dino-scratch/app/backend:app
