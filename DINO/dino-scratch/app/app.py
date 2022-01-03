@@ -15,10 +15,10 @@ device = torch.device("cpu")
 # build model
 model = vits.__dict__["vit_small"](patch_size=16, num_classes=0)
 url = "dino_deitsmall16_pretrain/dino_deitsmall16_pretrain.pth"
-state_dict = torch.hub.load_state_dict_from_url(
-    url="https://dl.fbaipublicfiles.com/dino/" + url
-)
-model.load_state_dict(state_dict, strict=True)
+#state_dict = torch.hub.load_state_dict_from_url(
+#    url="https://dl.fbaipublicfiles.com/dino/" + url
+#)
+#model.load_state_dict(state_dict, strict=True)
 
 
 models = {
