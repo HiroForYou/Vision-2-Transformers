@@ -13,12 +13,16 @@ from visualize_attention import getAttentionMapOfFinalModel
 
 device = torch.device("cpu")
 # build model
-model = vits.__dict__["vit_small"](patch_size=16, num_classes=0)
-url = "dino_deitsmall16_pretrain/dino_deitsmall16_pretrain.pth"
-state_dict = torch.hub.load_state_dict_from_url(
-    url="https://dl.fbaipublicfiles.com/dino/" + url
-)
-model.load_state_dict(state_dict, strict=True)
+
+
+def getFinalModel():
+    model = vits.__dict__["vit_small"](patch_size=16, num_classes=0)
+    url = "dino_deitsmall16_pretrain/dino_deitsmall16_pretrain.pth"
+    state_dict = torch.hub.load_state_dict_from_url(
+        url="https://dl.fbaipublicfiles.com/dino/" + url
+    )
+    model.load_state_dict(state_dict, strict=True)
+    return model
 
 
 models = {
@@ -26,6 +30,7 @@ models = {
     "DINO - 10 épocas": torch.load(
         "DINO/dino-scratch/logs-scratch-local-10e/best_model.pth", map_location="cpu"
     ).backbone,
+    "DINO - 50 épocas": getFinalModel(),
 }
 
 dataset = ImageFolder("DINO/dino-scratch/data_deploy/")
@@ -183,7 +188,7 @@ def plotAttention():
             transforms.Resize((224, 224)),
         ]
     )
-    if model_name in models.keys():
+    if model_name in ["Supervisado", "DINO - 10 épocas"]:
         attns = (
             visualize_attention(img, models[model_name], k=30)
             .detach()[:]
@@ -212,7 +217,7 @@ def plotAttention():
         col2.image(map_attention, use_column_width=True)
 
     else:
-        attn = getAttentionMapOfFinalModel(model, device, img, i_head)
+        attn = getAttentionMapOfFinalModel(models[model_name], device, img, i_head)
 
         # original image
         plt.imshow(tform(img))
