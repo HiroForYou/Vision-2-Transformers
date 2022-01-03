@@ -3,6 +3,5 @@ __pycache__/
 logs-pretrained-k80-10e/
 logs-pretrained-local/
 logs-scratch-local-10e/*
-!logs-scratch-local-10e/best_model.pth
 data/
 other/
