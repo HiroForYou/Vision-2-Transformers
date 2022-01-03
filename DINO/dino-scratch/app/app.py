@@ -14,7 +14,6 @@ from visualize_attention import getAttentionMapOfFinalModel
 
 device = torch.device("cpu")
 model = vits.__dict__["vit_small"](patch_size=16, num_classes=0)
-# build model
 
 
 @st.cache(ttl=0.4 * 3600)
