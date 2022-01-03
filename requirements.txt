@@ -1,11 +1,7 @@
 --find-links https://download.pytorch.org/whl/torch_stable.html
-numpy
-torch==1.9.0+cpu
-torchvision==0.10.0+cpu
-voila
-jupyterlab 
-textblob
-ipyvuetify
-voila-vuetify
-matplotlib
+numpy==1.21.2
+torch==1.9.1+cpu
+torchvision==0.10.0+cpu 
 timm
+streamlit
+matplotlib
