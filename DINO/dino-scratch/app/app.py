@@ -4,6 +4,7 @@ from PIL import Image
 import streamlit as st
 import timm
 import torch
+from torch.utils.data import dataset
 from torchvision.datasets import ImageFolder
 import torchvision.transforms as transforms
 import torch.nn.functional as F
@@ -40,14 +41,19 @@ def getMidModel():
     return midModel
 
 
+@st.cache(ttl=0.4 * 3600)
+def getDataset():
+    return ImageFolder("DINO/dino-scratch/data_deploy/")
+
+
 models = {
     "Supervisado": getSupervisedModel(),
     "DINO - 10 épocas": getMidModel(),
     "DINO - 50 épocas": getFinalModel(),
 }
 
-dataset = ImageFolder("DINO/dino-scratch/data_deploy/")
 
+dataset = getDataset()
 
 st.title("Demo interactiva de DINO")
 
@@ -96,6 +102,7 @@ text-align: center;
 st.markdown(footer, unsafe_allow_html=True)
 
 
+@st.cache(ttl=0.4 * 3600)
 def get_last_attention(backbone, x):
     """Get the attention weights of CLS from the last self-attention layer.
 
@@ -144,6 +151,7 @@ def get_last_attention(backbone, x):
     return attn[:, :, 0, 1:]
 
 
+@st.cache(ttl=0.4 * 3600)
 def threshold(attn, k=30):
     n_heads = len(attn)
     indices = attn.argsort(dim=1, descending=True)[:, k:]
@@ -156,6 +164,7 @@ def threshold(attn, k=30):
     return attn
 
 
+@st.cache(ttl=0.4 * 3600)
 def visualize_attention(img, backbone, k=30):
     """Create attention image.
 
