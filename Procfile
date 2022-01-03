@@ -1,1 +1,1 @@
-web: streamlit run DINO/dino-scratch/app/app.py
+web: sh setup.sh && streamlit run DINO/dino-scratch/app/app.py
