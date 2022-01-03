@@ -11,10 +11,10 @@ from torchvision import transforms
 from config import URL
 
 st.set_page_config(
-        page_title="demo DINO",
-        page_icon="fire",
-        layout="wide",
-    )
+    page_title="demo DINO",
+    page_icon="fire",
+    layout="wide",
+)
 
 
 def getPrediction(image, model_name, i_head):
@@ -54,7 +54,8 @@ i_head = st.sidebar.slider(
 
 st.write(f"#### Usando modelo {model_name}")
 
-image_file = st.file_uploader("Subir imagen", type=["png","jpg","jpeg"])
+image_file = st.file_uploader("Subir imagen", type=["png", "jpg", "jpeg"])
+
 
 def plotAttention():
     tform = transforms.Compose([transforms.Resize((224, 224))])
@@ -74,7 +75,7 @@ def plotAttention():
 plotAttention()
 
 st.subheader("Prueba en video")
-video_file = open('DINO/dino-scratch/app/presidente.mp4', 'rb')
+video_file = open("DINO/dino-scratch/app/presidente.mp4", "rb")
 video_bytes = video_file.read()
 
 st.video(video_bytes)
