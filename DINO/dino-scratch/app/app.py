@@ -24,11 +24,11 @@ model.load_state_dict(state_dict, strict=True)
 models = {
     "Supervisado": timm.create_model("deit_small_patch16_224", pretrained=True),
     "DINO - 10 épocas": torch.load(
-        "./../logs-scratch-local-10e/best_model.pth", map_location="cpu"
+        "DINO/dino-scratch/logs-scratch-local-10e/best_model.pth", map_location="cpu"
     ).backbone,
 }
 
-dataset = ImageFolder("./../data_deploy/")
+dataset = ImageFolder("DINO/dino-scratch/data_deploy/")
 
 
 st.title("Demo interactiva de DINO")
