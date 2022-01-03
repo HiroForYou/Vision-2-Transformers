@@ -21,7 +21,7 @@ def getSupervisedModel():
 
 def getMidModel():
     midModel = torch.load(
-        "DINO/dino-scratch/logs-scratch-local-10e/best_model.pth", map_location="cpu"
+        "../logs-scratch-local-10e/best_model.pth", map_location="cpu"
     ).backbone
     return midModel
 
