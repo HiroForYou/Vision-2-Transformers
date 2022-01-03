@@ -39,7 +39,7 @@ st.title("Demo interactiva de DINO")
 
 model_name = st.sidebar.selectbox(
     #"Seleccione el modelo", ("Supervisado", "DINO - 10 épocas", "DINO - 50 épocas")
-    "Seleccione el modelo", ("DINO - 50 épocas")
+    "Seleccione el modelo", ("DINO - 10 épocas", "DINO - 50 épocas")
 )
 i_image = st.sidebar.slider(
     "Seleccione la imagen", min_value=0, max_value=len(dataset) - 1, value=18
