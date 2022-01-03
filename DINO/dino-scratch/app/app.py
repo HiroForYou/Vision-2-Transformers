@@ -37,7 +37,7 @@ model_name = st.sidebar.selectbox(
     "Seleccione el modelo", ("Supervisado", "DINO - 10 épocas", "DINO - 50 épocas")
 )
 i_image = st.sidebar.slider(
-    "Seleccione la imagen", min_value=0, max_value=len(dataset) - 1, value=949
+    "Seleccione la imagen", min_value=0, max_value=len(dataset) - 1, value=18
 )
 i_head = st.sidebar.slider(
     "Seleccione el número de head", min_value=0, max_value=5, value=3
