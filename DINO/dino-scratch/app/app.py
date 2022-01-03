@@ -14,7 +14,6 @@ from visualize_attention import getAttentionMapOfFinalModel
 device = torch.device("cpu")
 # build model
 
-
 def getFinalModel():
     model = vits.__dict__["vit_small"](patch_size=16, num_classes=0)
     url = "dino_deitsmall16_pretrain/dino_deitsmall16_pretrain.pth"
@@ -26,11 +25,11 @@ def getFinalModel():
 
 
 models = {
-    "Supervisado": timm.create_model("deit_small_patch16_224", pretrained=True),
-    # "DINO - 10 épocas": torch.load(
-    #    "DINO/dino-scratch/logs-scratch-local-10e/best_model.pth", map_location="cpu"
-    # ).backbone,
-    "DINO - 50 épocas": getFinalModel(),
+    #"Supervisado": timm.create_model("deit_small_patch16_224", pretrained=True),
+    "DINO - 10 épocas": torch.load(
+       "DINO/dino-scratch/logs-scratch-local-10e/best_model.pth", map_location="cpu"
+    ).backbone,
+    "DINO - 50 épocas": getFinalModel()
 }
 
 dataset = ImageFolder("DINO/dino-scratch/data_deploy/")
@@ -39,9 +38,8 @@ dataset = ImageFolder("DINO/dino-scratch/data_deploy/")
 st.title("Demo interactiva de DINO")
 
 model_name = st.sidebar.selectbox(
-    # "Seleccione el modelo", ("Supervisado", "DINO - 10 épocas", "DINO - 50 épocas")
-    "Seleccione el modelo",
-    ("Supervisado", "DINO - 50 épocas"),
+    #"Seleccione el modelo", ("Supervisado", "DINO - 10 épocas", "DINO - 50 épocas")
+    "Seleccione el modelo", ("DINO - 50 épocas")
 )
 i_image = st.sidebar.slider(
     "Seleccione la imagen", min_value=0, max_value=len(dataset) - 1, value=18
@@ -190,7 +188,7 @@ def plotAttention():
             transforms.Resize((224, 224)),
         ]
     )
-    if model_name in ["Supervisado"]:
+    if model_name in ["DINO - 10 épocas"]:
         attns = (
             visualize_attention(img, models[model_name], k=30)
             .detach()[:]
