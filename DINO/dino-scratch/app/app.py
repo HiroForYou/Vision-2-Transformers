@@ -52,13 +52,13 @@ i_head = st.sidebar.slider(
 
 st.write(f"#### Usando modelo {model_name}")
 
-image_file = st.file_uploader("Subir imagen", type=["png", "jpg", "jpeg"])
-
 
 def plotAttention():
+    image_file = st.file_uploader("Subir imagen", type=["png", "jpg", "jpeg"])
     tform = transforms.Compose([transforms.Resize((224, 224))])
     if image_file is not None:
         img = Image.open(image_file)
+        image_file = None
     else:
         img = dataset[i_image][0]  # 1949
     col1, col2 = st.columns(2)
@@ -68,9 +68,6 @@ def plotAttention():
 
     col2.subheader(f"Head Attention {i_head}")
     col2.image(tform(attn), use_column_width=True)
-
-
-plotAttention()
 
 st.subheader("Prueba en video")
 video_file = open("DINO/dino-scratch/app/presidente.mp4", "rb")
