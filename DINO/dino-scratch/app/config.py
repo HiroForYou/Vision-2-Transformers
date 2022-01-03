@@ -1,1 +1,1 @@
-URL=
+URL = "https://backend-dino-t1.herokuapp.com/getAttentionMap"

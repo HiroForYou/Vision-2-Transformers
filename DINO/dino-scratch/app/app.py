@@ -1,4 +1,3 @@
-import matplotlib.pyplot as plt
 from PIL import Image
 import streamlit as st
 from torchvision.datasets import ImageFolder
