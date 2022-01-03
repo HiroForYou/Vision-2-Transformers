@@ -1,1 +1,1 @@
-web: voila --port=$PORT --no-browser --enable_nbextensions=True DINO/dino-scratch/visualize_attentions.ipynb
+web: streamlit run DINO/dino-scratch/app/app.py

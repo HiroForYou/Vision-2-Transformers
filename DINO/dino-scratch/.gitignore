@@ -5,4 +5,4 @@ logs-pretrained-local/
 logs-scratch-local-10e/*
 !logs-scratch-local-10e/best_model.pth
 data/
-mildlyoverfitted/
+other/
