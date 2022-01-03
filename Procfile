@@ -1,1 +1,1 @@
-web: gunicorn -w 2 -k uvicorn.workers.UvicornWorker --chdir DINO/dino-scratch/app/ backend:app
+web: gunicorn -w 4 -k uvicorn.workers.UvicornWorker --chdir DINO/dino-scratch/app/ backend:app

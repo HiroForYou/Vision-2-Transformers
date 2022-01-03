@@ -9,39 +9,13 @@ import torch.nn.functional as F
 from torchvision import transforms
 import uvicorn
 
-import vision_transformer as vits
+from models import allModels
 from visualize_attention import getAttentionMapOfFinalModel
 
 device = torch.device("cpu")
-model = vits.__dict__["vit_small"](patch_size=16, num_classes=0)
-
-def getSupervisedModel():
-    model_supervised = timm.create_model("deit_small_patch16_224", pretrained=True)
-    return model_supervised
-
-def getMidModel():
-    midModel = torch.load(
-        "../logs-scratch-local-10e/best_model.pth", map_location="cpu"
-    ).backbone
-    return midModel
-
-def getFinalModel():
-    url = "dino_deitsmall16_pretrain/dino_deitsmall16_pretrain.pth"
-    state_dict = torch.hub.load_state_dict_from_url(
-        url="https://dl.fbaipublicfiles.com/dino/" + url
-    )
-    model.load_state_dict(state_dict, strict=True)
-    return model
-
-
-models = {
-    "Supervisado": getSupervisedModel(),
-    "DINO - 10 épocas": getMidModel(),
-    "DINO - 50 épocas": getFinalModel(),
-}
 
 app = FastAPI(
-    title="Solver Captcha", description="Endpoint Solver Captcha", version="0.0.1"
+    title="demo DINO", description="Endpoint demo DINO", version="0.0.1"
 )
 origins = ["*"]
 app.add_middleware(
@@ -58,7 +32,7 @@ def get_last_attention(backbone, x):
 
     Parameters
     ----------
-    backbone : timm.models.vision_transformer.VisionTransformer
+    backbone : timm.allModels.vision_transformer.VisionTransformer
         Instantiated Vision Transformer. Note that we will in-place
         take the `head` attribute and replace it with `nn.Identity`.
 
@@ -153,13 +127,13 @@ def visualize_attention(img, backbone, k=30):
     return attn
 
 
-def run_predict(model_name, i_head, image_file):
+def run_predict(models_dict, model_name, i_head, image_file):
 
     image = Image.open(BytesIO(image_file.read())).convert("RGB")
 
     if model_name in ["Supervisado", "DINO - 10 épocas"]:
         attns = (
-            visualize_attention(image, models[model_name], k=30)
+            visualize_attention(image, models_dict[model_name], k=30)
             .detach()[:]
             .permute(1, 2, 0)
             .numpy()
@@ -174,7 +148,7 @@ def run_predict(model_name, i_head, image_file):
         plt.close()
         return img_buf
     else:
-        attn = getAttentionMapOfFinalModel(models[model_name], device, image, i_head)
+        attn = getAttentionMapOfFinalModel(models_dict[model_name], device, image, i_head)
         fig = plt.figure(dpi=70.0)
         fig.figimage(attn)
         img_buf = BytesIO()
@@ -191,7 +165,7 @@ def home():
 @app.post("/getAttentionMap")
 def _file_upload(image_file: UploadFile = File(...), model_name: str = Form(...), i_head: str = Form(...)):
     try:
-        attn = run_predict(model_name, int(i_head), image_file.file)
+        attn = run_predict(allModels, model_name, int(i_head), image_file.file)
         return Response(content=attn.getvalue(), media_type="image/png")
 
     except Exception as e:
