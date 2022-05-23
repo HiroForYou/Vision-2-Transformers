@@ -11,7 +11,8 @@ vision-longformer/
 xcit/
 DINO/dino/
 ViT-app
-Liver-Segmentation-Using-Monai-and-PyTorch/
-dlwpt-code/
 Pipfile
 Pipfile.lock
+DINO/dino-scratch/other
+dlwpt-code/
+Liver-Segmentation-Using-Monai-and-PyTorch/
