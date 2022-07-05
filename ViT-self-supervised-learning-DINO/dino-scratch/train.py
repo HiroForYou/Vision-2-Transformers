@@ -6,11 +6,10 @@ import timm
 import torch
 import torchvision.transforms as transforms
 import tqdm
+from evaluation import compute_embedding, compute_knn
 from torch.utils.data import DataLoader, SubsetRandomSampler
 from torch.utils.tensorboard import SummaryWriter
 from torchvision.datasets import ImageFolder
-
-from evaluation import compute_embedding, compute_knn
 from utils import DataAugmentation, Head, Loss, MultiCropWrapper, clip_gradients
 
 
@@ -48,7 +47,7 @@ def main():
     logging_path = pathlib.Path(args.tensorboard_dir)
     device = torch.device(args.device)
 
-    n_workers = 1 # para mi maquinita solo 2 como maximo
+    n_workers = 1  # para mi maquinita solo 2 como maximo
 
     # Data related
     with path_labels.open("r") as f:

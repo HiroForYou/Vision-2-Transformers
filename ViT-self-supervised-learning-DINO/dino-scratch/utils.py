@@ -26,6 +26,7 @@ class DataAugmentation:
         Local transform. Note that the augmentation is stochastic so one
         instance is enough and will lead to different crops.
     """
+
     def __init__(
         self,
         global_crops_scale=(0.4, 1),
@@ -217,6 +218,7 @@ class MultiCropWrapper(nn.Module):
     new_head : Head
         New head that is going to be put on top of the `backbone`.
     """
+
     def __init__(self, backbone, new_head):
         super().__init__()
         backbone.head = nn.Identity()  # desactivate original head
@@ -261,6 +263,7 @@ class Loss(nn.Module):
         Hyperparameter for the exponential moving average that determines
         the center logits. The higher the more the running average matters.
     """
+
     def __init__(
         self, out_dim, teacher_temp=0.04, student_temp=0.1, center_momentum=0.9
     ):
@@ -323,6 +326,7 @@ class Loss(nn.Module):
         self.center = self.center * self.center_momentum + batch_center * (
             1 - self.center_momentum
         )
+
 
 def clip_gradients(model, clip=2.0):
     """Rescale norm of computed gradients.
