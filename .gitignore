@@ -23,4 +23,6 @@ ViT-self-supervised-learning-DINO/dino-scratch/other
 ViT-in-medical-imaging/data/imagesTr/
 ViT-in-medical-imaging/data/imagesTs/
 ViT-in-medical-imaging/data/labelsTr/
+ViT-in-medical-imaging/README_es.md
+ViT-in-medical-imaging/data-private
 *.lock
