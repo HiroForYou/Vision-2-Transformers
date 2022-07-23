@@ -26,3 +26,7 @@ ViT-in-medical-imaging/data/labelsTr/
 ViT-in-medical-imaging/README_es.md
 ViT-in-medical-imaging/data-private
 *.lock
+*.pt
+ViT-in-medical-imaging/BTCV/dataset/dataset0
+__pycache__
+ViT-in-medical-imaging/BTCV/runs/test

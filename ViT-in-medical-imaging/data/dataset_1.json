@@ -1,0 +1,42 @@
+{
+  "description": "btcv yucheng",
+  "labels": {
+    "0": "background",
+    "1": "spleen",
+    "2": "rkid",
+    "3": "lkid",
+    "4": "gall",
+    "5": "eso",
+    "6": "liver",
+    "7": "sto",
+    "8": "aorta",
+    "9": "IVC",
+    "10": "veins",
+    "11": "pancreas",
+    "12": "rad",
+    "13": "lad"
+  },
+  "licence": "yt",
+  "modality": {
+    "0": "CT"
+  },
+  "name": "btcv",
+  "numTest": 1,
+  "numTraining": 1,
+  "reference": "Vanderbilt University",
+  "release": "1.0 06/08/2015",
+  "tensorImageSize": "3D",
+  "test": ["imagesTs/img0061.nii.gz"],
+  "training": [
+    {
+      "image": "imagesTr/img0001.nii.gz",
+      "label": "labelsTr/label0001.nii.gz"
+    }
+  ],
+  "validation": [
+    {
+      "image": "imagesTr/img0035.nii.gz",
+      "label": "labelsTr/label0035.nii.gz"
+    }
+  ]
+}

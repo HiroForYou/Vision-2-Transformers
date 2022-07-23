@@ -70,14 +70,14 @@ Proporcionamos varios modelos pre-entrenados en el conjunto de datos BTCV a cont
 
 Los datos de entrenamiento son del [BTCV challenge](https://www.synapse.org/#!Synapse:syn3193805/wiki/217752).
 
-- Objetivo: 13 órganos abdominales, incluidos 1. Bazo 2. Riñón derecho 3. Riñón izquierdo 4. Vesícula biliar 5. Esófago 6. Hígado 7. Estómago 8. Aorta 9. VCI 10. Venas porta y esplénica 11. Páncreas 12. Glándula suprarrenal derecha 13 .Glándula suprarrenal izquierda.
+- Objetivo: 13 órganos abdominales, incluidos 1. Bazo 2. Riñón derecho 3. Riñón izquierdo 4. Vesícula biliar 5. Esófago 6. Hígado 7. Estómago 8. Aorta 9. VCI 10. Venas porta y esplénica 11. Páncreas 12. Glándula suprarrenal derecha 13. Glándula suprarrenal izquierda.
 - Tarea: Segmentación
 - Modalidad: TC
 - Tamaño: 30 volúmenes 3D (24 Entrenamiento + 6 Pruebas)
 
 Descargue el archivo json que se usa para entrenar nuestros modelos desde este <a href="https://drive.google.com/file/d/1t4fIQQkONv7ArTSZe4Nucwkk1KfdUDvW/view?usp=sharing"> enlace</a>.
 
-Una vez que se haya descargado el archivo json, colóquelo en la misma carpeta que el conjunto de datos. Tenga en cuenta que debe proporcionar la ubicación de su directorio de conjunto de datos utilizando `--data_dir`.
+Una vez que se haya descargado el archivo json, colóquelo en la misma carpeta que el dataset. Tenga en cuenta que debe proporcionar la ubicación de su directorio de conjunto de datos utilizando `--data_dir`.
 
 # Entrenamiento
 
@@ -115,8 +115,7 @@ python main.py
 Para entrenar un `Swin UNETR` con pesos del encoder _self-supervised_ en una sola GPU con _gradient checkpointing_:
 
 ```bash
-python main.py --json_list=<json-path> --data_dir=<data-path> --feature_size=48 --use_ssl_pretrained\
---roi_x=96 --roi_y=96 --roi_z=96  --use_checkpoint --batch_size=<batch-size> --max_epochs=<total-num-epochs> --save_checkpoint
+python main.py --json_list=<json-path> --data_dir=<data-path> --feature_size=48 --use_ssl_pretrained --roi_x=96 --roi_y=96 --roi_z=96  --use_checkpoint --batch_size=<batch-size> --max_epochs=<total-num-epochs> --save_checkpoint
 ```
 
 ## Entrenamiento a partir de pesos _self-supervised_ en múltiples GPU (modelo base sin _gradient checkpointing_)
@@ -124,8 +123,7 @@ python main.py --json_list=<json-path> --data_dir=<data-path> --feature_size=48 
 Para entrenar un `Swin UNETR` con pesos del encoder _self-supervised_ en varias GPU sin _gradient checkpointing_
 
 ```bash
-python main.py --json_list=<json-path> --data_dir=<data-path> --feature_size=48 --use_ssl_pretrained\
---roi_x=96 --roi_y=96 --roi_z=96  --distributed --optim_lr=2e-4 --batch_size=<batch-size> --max_epochs=<total-num-epochs> --save_checkpoint
+python main.py --json_list=<json-path> --data_dir=<data-path> --feature_size=48 --use_ssl_pretrained --roi_x=96 --roi_y=96 --roi_z=96  --distributed --optim_lr=2e-4 --batch_size=<batch-size> --max_epochs=<total-num-epochs> --save_checkpoint
 ```
 
 ## Entrenando desde cero en una sola GPU (modelo base sin AMP)
@@ -166,8 +164,8 @@ python test.py --json_list=<json-path> --data_dir=<data-path> --feature_size=<fe
 
 # Finetuning
 
-Please download the checkpoints for models presented in the above table and place the model checkpoints in `pretrained_models` folder.
-Use the following commands for finetuning.
+Descargue los checkpoints para los modelos presentados en la tabla anterior y coloque los checkpoints en la carpeta `pretrained_models`.
+Utilice los siguientes comandos para el _finetuning_.
 
 ## Finetuning de modelo base en una sola GPU (_gradient check-pointing_)
 

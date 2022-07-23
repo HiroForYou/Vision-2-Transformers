@@ -28,7 +28,7 @@ parser.add_argument(
     help="pretrained checkpoint directory",
 )
 parser.add_argument(
-    "--data_dir", default="/dataset/dataset0/", type=str, help="dataset directory"
+    "--data_dir", default="./dataset/dataset0/", type=str, help="dataset directory"
 )
 parser.add_argument("--exp_name", default="test1", type=str, help="experiment name")
 parser.add_argument(

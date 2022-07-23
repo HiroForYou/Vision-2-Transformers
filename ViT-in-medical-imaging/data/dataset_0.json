@@ -1,439 +1,176 @@
-{
-  "description": "btcv yucheng",
-  "labels": {
-    "0": "background",
-    "1": "spleen",
-    "2": "rkid",
-    "3": "lkid",
-    "4": "gall",
-    "5": "eso",
-    "6": "liver",
-    "7": "sto",
-    "8": "aorta",
-    "9": "IVC",
-    "10": "veins",
-    "11": "pancreas",
-    "12": "rad",
-    "13": "lad"
-  },
-  "licence": "yt",
-  "modality": {
-    "0": "CT"
-  },
-  "name": "btcv",
-  "numTest": 20,
-  "numTraining": 80,
-  "reference": "Vanderbilt University",
-  "release": "1.0 06/08/2015",
-  "tensorImageSize": "3D",
-  "test": [
-    "det0000301_avg.nii.gz",
-    "det0000601_avg.nii.gz",
-    "det0000701_avg.nii.gz",
-    "det0007301_avg.nii.gz",
-    "det0007401_avg.nii.gz",
-    "det0007501_avg.nii.gz",
-    "det0007601_avg.nii.gz",
-    "det0007801_avg.nii.gz",
-    "det0008301_avg.nii.gz",
-    "det0008501_avg.nii.gz",
-    "det0008601_avg.nii.gz",
-    "det0008701_avg.nii.gz",
-    "det0009101_avg.nii.gz",
-    "det0009401_avg.nii.gz",
-    "det0009501_avg.nii.gz",
-    "det0009701_avg.nii.gz",
-    "det0010001_avg.nii.gz",
-    "det0010201_avg.nii.gz",
-    "det0010401_avg.nii.gz",
-    "det0010501_avg.nii.gz",
-    "det0010701_avg.nii.gz",
-    "det0010801_avg.nii.gz",
-    "det0010901_avg.nii.gz",
-    "det0011201_avg.nii.gz",
-    "det0011301_avg.nii.gz",
-    "det0011401_avg.nii.gz",
-    "det0011501_avg.nii.gz",
-    "det0011601_avg.nii.gz",
-    "det0011701_avg.nii.gz",
-    "det0012001_avg.nii.gz",
-    "det0012101_avg.nii.gz",
-    "det0012201_avg.nii.gz",
-    "det0012401_avg.nii.gz",
-    "det0012501_avg.nii.gz",
-    "det0012901_avg.nii.gz",
-    "det0013001_avg.nii.gz",
-    "det0013101_avg.nii.gz",
-    "det0013301_avg.nii.gz",
-    "det0013401_avg.nii.gz",
-    "det0013801_avg.nii.gz",
-    "det0014001_avg.nii.gz",
-    "det0014401_avg.nii.gz",
-    "det0014501_avg.nii.gz",
-    "det0014601_avg.nii.gz",
-    "det0014701_avg.nii.gz",
-    "det0014801_avg.nii.gz",
-    "det0014901_avg.nii.gz",
-    "det0015001_avg.nii.gz",
-    "det0015101_avg.nii.gz",
-    "det0015501_avg.nii.gz",
-    "det0019401_avg.nii.gz",
-    "det0020201_avg.nii.gz",
-    "det0021401_avg.nii.gz",
-    "det0024301_avg.nii.gz",
-    "det0025001_avg.nii.gz",
-    "det0026201_avg.nii.gz",
-    "det0026601_avg.nii.gz",
-    "det0026701_avg.nii.gz",
-    "det0027601_avg.nii.gz",
-    "det0029201_avg.nii.gz",
-    "det0029301_avg.nii.gz",
-    "det0029601_avg.nii.gz",
-    "det0029901_avg.nii.gz",
-    "det0030301_avg.nii.gz",
-    "det0035301_avg.nii.gz",
-    "det0042201_avg.nii.gz",
-    "det0042301_avg.nii.gz",
-    "det0042701_avg.nii.gz",
-    "det0043001_avg.nii.gz",
-    "det0043301_avg.nii.gz",
-    "det0044001_avg.nii.gz",
-    "det0044901_avg.nii.gz"
-  ],
-  "training": [
-    {
-      "image": "imagesTr/det0000101_avg.nii.gz",
-      "label": "labelsTr/det0000101_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0000201_avg.nii.gz",
-      "label": "labelsTr/det0000201_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0000801_avg.nii.gz",
-      "label": "labelsTr/det0000801_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0001101_avg.nii.gz",
-      "label": "labelsTr/det0001101_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0001201_avg.nii.gz",
-      "label": "labelsTr/det0001201_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0001301_avg.nii.gz",
-      "label": "labelsTr/det0001301_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0001401_avg.nii.gz",
-      "label": "labelsTr/det0001401_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0001501_avg.nii.gz",
-      "label": "labelsTr/det0001501_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0001601_avg.nii.gz",
-      "label": "labelsTr/det0001601_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0001701_avg.nii.gz",
-      "label": "labelsTr/det0001701_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0001801_avg.nii.gz",
-      "label": "labelsTr/det0001801_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0002001_avg.nii.gz",
-      "label": "labelsTr/det0002001_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0002401_avg.nii.gz",
-      "label": "labelsTr/det0002401_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0002501_avg.nii.gz",
-      "label": "labelsTr/det0002501_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0002601_avg.nii.gz",
-      "label": "labelsTr/det0002601_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0002701_avg.nii.gz",
-      "label": "labelsTr/det0002701_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0002801_avg.nii.gz",
-      "label": "labelsTr/det0002801_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0003101_avg.nii.gz",
-      "label": "labelsTr/det0003101_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0003201_avg.nii.gz",
-      "label": "labelsTr/det0003201_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0003301_avg.nii.gz",
-      "label": "labelsTr/det0003301_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0003401_avg.nii.gz",
-      "label": "labelsTr/det0003401_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0003501_avg.nii.gz",
-      "label": "labelsTr/det0003501_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0003601_avg.nii.gz",
-      "label": "labelsTr/det0003601_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0003801_avg.nii.gz",
-      "label": "labelsTr/det0003801_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0003901_avg.nii.gz",
-      "label": "labelsTr/det0003901_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0004001_avg.nii.gz",
-      "label": "labelsTr/det0004001_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0004101_avg.nii.gz",
-      "label": "labelsTr/det0004101_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0004201_avg.nii.gz",
-      "label": "labelsTr/det0004201_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0004301_avg.nii.gz",
-      "label": "labelsTr/det0004301_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0004401_avg.nii.gz",
-      "label": "labelsTr/det0004401_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0004601_avg.nii.gz",
-      "label": "labelsTr/det0004601_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0004701_avg.nii.gz",
-      "label": "labelsTr/det0004701_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0004801_avg.nii.gz",
-      "label": "labelsTr/det0004801_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0004901_avg.nii.gz",
-      "label": "labelsTr/det0004901_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0005001_avg.nii.gz",
-      "label": "labelsTr/det0005001_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0005101_avg.nii.gz",
-      "label": "labelsTr/det0005101_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0005201_avg.nii.gz",
-      "label": "labelsTr/det0005201_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0005401_avg.nii.gz",
-      "label": "labelsTr/det0005401_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0005601_avg.nii.gz",
-      "label": "labelsTr/det0005601_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0005701_avg.nii.gz",
-      "label": "labelsTr/det0005701_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0005801_avg.nii.gz",
-      "label": "labelsTr/det0005801_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0005901_avg.nii.gz",
-      "label": "labelsTr/det0005901_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0006001_avg.nii.gz",
-      "label": "labelsTr/det0006001_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0006101_avg.nii.gz",
-      "label": "labelsTr/det0006101_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0006201_avg.nii.gz",
-      "label": "labelsTr/det0006201_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0006301_avg.nii.gz",
-      "label": "labelsTr/det0006301_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0006401_avg.nii.gz",
-      "label": "labelsTr/det0006401_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0006501_avg.nii.gz",
-      "label": "labelsTr/det0006501_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0007101_avg.nii.gz",
-      "label": "labelsTr/det0007101_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0008801_avg.nii.gz",
-      "label": "labelsTr/det0008801_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0008901_avg.nii.gz",
-      "label": "labelsTr/det0008901_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0009001_avg.nii.gz",
-      "label": "labelsTr/det0009001_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0009301_avg.nii.gz",
-      "label": "labelsTr/det0009301_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0010601_avg.nii.gz",
-      "label": "labelsTr/det0010601_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0014101_avg.nii.gz",
-      "label": "labelsTr/det0014101_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0014201_avg.nii.gz",
-      "label": "labelsTr/det0014201_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0015201_avg.nii.gz",
-      "label": "labelsTr/det0015201_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0015401_avg.nii.gz",
-      "label": "labelsTr/det0015401_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0015601_avg.nii.gz",
-      "label": "labelsTr/det0015601_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0016101_avg.nii.gz",
-      "label": "labelsTr/det0016101_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0021501_avg.nii.gz",
-      "label": "labelsTr/det0021501_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0021701_avg.nii.gz",
-      "label": "labelsTr/det0021701_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0024401_avg.nii.gz",
-      "label": "labelsTr/det0024401_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0026901_avg.nii.gz",
-      "label": "labelsTr/det0026901_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0028301_avg.nii.gz",
-      "label": "labelsTr/det0028301_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0028601_avg.nii.gz",
-      "label": "labelsTr/det0028601_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0028801_avg.nii.gz",
-      "label": "labelsTr/det0028801_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0029001_avg.nii.gz",
-      "label": "labelsTr/det0029001_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0030901_avg.nii.gz",
-      "label": "labelsTr/det0030901_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0035501_avg.nii.gz",
-      "label": "labelsTr/det0035501_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0037101_avg.nii.gz",
-      "label": "labelsTr/det0037101_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0039401_avg.nii.gz",
-      "label": "labelsTr/det0039401_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0039501_avg.nii.gz",
-      "label": "labelsTr/det0039501_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0040001_avg.nii.gz",
-      "label": "labelsTr/det0040001_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0040101_avg.nii.gz",
-      "label": "labelsTr/det0040101_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0040201_avg.nii.gz",
-      "label": "labelsTr/det0040201_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0042001_avg.nii.gz",
-      "label": "labelsTr/det0042001_avg_seg.nii.gz"
-    }
-  ],
-  "validation": [
-    {
-      "image": "imagesTr/det0042401_avg.nii.gz",
-      "label": "labelsTr/det0042401_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0042501_avg.nii.gz",
-      "label": "labelsTr/det0042501_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0042601_avg.nii.gz",
-      "label": "labelsTr/det0042601_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0043101_avg.nii.gz",
-      "label": "labelsTr/det0043101_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0043201_avg.nii.gz",
-      "label": "labelsTr/det0043201_avg_seg.nii.gz"
-    },
-    {
-      "image": "imagesTr/det0044601_avg.nii.gz",
-      "label": "labelsTr/det0044601_avg_seg.nii.gz"
-    }
-  ]
+ {
+    "description": "btcv yucheng",
+    "labels": {
+        "0": "background",
+        "1": "spleen",
+        "2": "rkid",
+        "3": "lkid",
+        "4": "gall",
+        "5": "eso",
+        "6": "liver",
+        "7": "sto",
+        "8": "aorta",
+        "9": "IVC",
+        "10": "veins",
+        "11": "pancreas",
+        "12": "rad",
+        "13": "lad"
+    },
+    "licence": "yt",
+    "modality": {
+        "0": "CT"
+    },
+    "name": "btcv",
+    "numTest": 20,
+    "numTraining": 80,
+    "reference": "Vanderbilt University",
+    "release": "1.0 06/08/2015",
+    "tensorImageSize": "3D",
+    "test": [
+        "imagesTs/img0061.nii.gz",
+        "imagesTs/img0062.nii.gz",
+        "imagesTs/img0063.nii.gz",
+        "imagesTs/img0064.nii.gz",
+        "imagesTs/img0065.nii.gz",
+        "imagesTs/img0066.nii.gz",
+        "imagesTs/img0067.nii.gz",
+        "imagesTs/img0068.nii.gz",
+        "imagesTs/img0069.nii.gz",
+        "imagesTs/img0070.nii.gz",
+        "imagesTs/img0071.nii.gz",
+        "imagesTs/img0072.nii.gz",
+        "imagesTs/img0073.nii.gz",
+        "imagesTs/img0074.nii.gz",
+        "imagesTs/img0075.nii.gz",
+        "imagesTs/img0076.nii.gz",
+        "imagesTs/img0077.nii.gz",
+        "imagesTs/img0078.nii.gz",
+        "imagesTs/img0079.nii.gz",
+        "imagesTs/img0080.nii.gz"
+    ],
+    "training": [
+        {
+            "image": "imagesTr/img0001.nii.gz",
+            "label": "labelsTr/label0001.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0002.nii.gz",
+            "label": "labelsTr/label0002.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0003.nii.gz",
+            "label": "labelsTr/label0003.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0004.nii.gz",
+            "label": "labelsTr/label0004.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0005.nii.gz",
+            "label": "labelsTr/label0005.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0006.nii.gz",
+            "label": "labelsTr/label0006.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0007.nii.gz",
+            "label": "labelsTr/label0007.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0008.nii.gz",
+            "label": "labelsTr/label0008.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0009.nii.gz",
+            "label": "labelsTr/label0009.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0010.nii.gz",
+            "label": "labelsTr/label0010.nii.gz"
+        },
+
+        {
+            "image": "imagesTr/img0021.nii.gz",
+            "label": "labelsTr/label0021.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0022.nii.gz",
+            "label": "labelsTr/label0022.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0023.nii.gz",
+            "label": "labelsTr/label0023.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0024.nii.gz",
+            "label": "labelsTr/label0024.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0025.nii.gz",
+            "label": "labelsTr/label0025.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0026.nii.gz",
+            "label": "labelsTr/label0026.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0027.nii.gz",
+            "label": "labelsTr/label0027.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0028.nii.gz",
+            "label": "labelsTr/label0028.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0029.nii.gz",
+            "label": "labelsTr/label0029.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0030.nii.gz",
+            "label": "labelsTr/label0030.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0031.nii.gz",
+            "label": "labelsTr/label0031.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0032.nii.gz",
+            "label": "labelsTr/label0032.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0033.nii.gz",
+            "label": "labelsTr/label0033.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0034.nii.gz",
+            "label": "labelsTr/label0034.nii.gz"
+        }
+    ],
+    "validation": [
+        {
+            "image": "imagesTr/img0035.nii.gz",
+            "label": "labelsTr/label0035.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0036.nii.gz",
+            "label": "labelsTr/label0036.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0037.nii.gz",
+            "label": "labelsTr/label0037.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0038.nii.gz",
+            "label": "labelsTr/label0038.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0039.nii.gz",
+            "label": "labelsTr/label0039.nii.gz"
+        },
+        {
+            "image": "imagesTr/img0040.nii.gz",
+            "label": "labelsTr/label0040.nii.gz"
+        }
+    ]
 }

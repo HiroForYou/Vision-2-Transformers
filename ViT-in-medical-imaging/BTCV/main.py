@@ -43,7 +43,7 @@ parser.add_argument(
     help="pretrained checkpoint directory",
 )
 parser.add_argument(
-    "--data_dir", default="/dataset/dataset0/", type=str, help="dataset directory"
+    "--data_dir", default="./dataset/dataset0/", type=str, help="dataset directory"
 )
 parser.add_argument(
     "--json_list", default="dataset_0.json", type=str, help="dataset json file"
