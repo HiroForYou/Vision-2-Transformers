@@ -30,3 +30,4 @@ ViT-in-medical-imaging/data-private
 ViT-in-medical-imaging/BTCV/dataset/dataset0
 __pycache__
 ViT-in-medical-imaging/BTCV/runs/test
+ViT-in-medical-imaging/download.py
