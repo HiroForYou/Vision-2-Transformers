@@ -12,9 +12,13 @@ En este trabajo se utiliza un modelo Swin UNETR (variante de un [Vision Transfor
     <img align="center" src="assets/ba15cbbe506c33daae4b19ab3d3bff998e93db32.png" alt="model" width="90%">
 </div>
 
-## Dataset
 
 ## Pipeline
+
+<div align="center">
+    <img align="center" src="assets/pipeline.png" alt="pipeline" width="90%">
+</div>
+
 
 ## Resultados
 
