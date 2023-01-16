@@ -7,6 +7,8 @@ papers/
 Swin-Unet/
 SwinTransformer/
 TransUNet/
+tutorials/
+dlwpt-code/
 vision-longformer/
 xcit/
 ViT-with-DINO/dino/
@@ -31,3 +33,5 @@ ViT-in-medical-imaging/BTCV/dataset/dataset0
 __pycache__
 ViT-in-medical-imaging/BTCV/runs/test
 ViT-in-medical-imaging/download.py
+ViT-to-melanoma/BA-Transformer
+ViT-to-melanoma/FAT-Net

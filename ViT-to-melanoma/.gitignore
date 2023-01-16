@@ -1,0 +1,12 @@
+/weights/
+/logs/
+/processed/
+/BA-Transformer/dataset/isic2016/
+/BA-Transformer/dataset/isic2017/
+/BA-Transformer/dataset/PH2Dataset/
+/TransUNet
+/Swin-Unet
+/classification/
+/base/
+/BA-Transformer/
+/FAT-Net/
