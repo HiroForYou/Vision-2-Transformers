@@ -22,7 +22,7 @@ El trabajo consiste en la creación y entrenamiento de un modelo multi-tarea bas
     <div>
         <img src="./assets/test_seg.png" with="240px"/>
         <h4>Segmentación sobre datos de prueba. Filas: (a) Imágenes originales (b) Mapa
-de segmentación objetivo (c) Segmentación generada por seg cls init (d) Segmentación
+de segmentación objetivo (c) Segmentación generada por <b>seg_cls_init</b> (d) Segmentación
 generada por <b>seg_cls_middle</b> (e) Segmentación generada por <b>seg_cls_masking</b>. Se
 observa que el enfoque con la segmentación más precisa es <b>seg_cls_init</b> y el enfoque con
 la segmentación menos coherente es <b>seg_cls_middle</b>. Fuente: elaboración propia. </h4>
